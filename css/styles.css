@@ -1,0 +1,201 @@
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: linear-gradient(90deg, #0d47a1, #1565c0);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header #reloj {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav a.activo {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  padding: 24px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Secciones */
+section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2 {
+  margin-bottom: 12px;
+  color: #0d47a1;
+}
+
+/* Botones */
+button {
+  background: #1565c0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+
+.colorBtn {
+  margin-right: 8px;
+}
+
+/* Inputs y formulario */
+input, textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin: 8px 0 14px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1565c0;
+}
+
+/* Lista de notas */
+#notasList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#notasList li button {
+  background: #e53935;
+  padding: 4px 8px;
+}
+
+#notasList li button:hover {
+  background: #c62828;
+}
+
+/* Mensajes de error y éxito */
+.error {
+  color: #e53935;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #2e7d32;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Colores dinámicos */
+.color-red { background: #ffebee; }
+.color-green { background: #e8f5e9; }
+.color-blue { background: #e3f2fd; }
+
+
+/* === Extras para cumplir con los puntos faltantes === */
+
+/* Mensaje de bienvenida */
+#salida {
+  background: #e3f2fd;
+  border-left: 5px solid #1565c0;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: #0d47a1;
+  font-weight: 500;
+}
+
+/* Resultados de sumar y multiplicar */
+#resSum, #resMul {
+  background: #f1f8e9;
+  border: 1px solid #c5e1a5;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2e7d32;
+  display: inline-block;
+}
+
+/* Contador de visitas */
+#totalVisitas {
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #fff3e0;
+  border: 1px solid #ffcc80;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+/* Efecto cuando aumenta visitas */
+.pulse {
+  animation: pulseAnim 0.4s ease;
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(1); background: #fff3e0; }
+  50% { transform: scale(1.2); background: #ffe0b2; }
+  100% { transform: scale(1); background: #fff3e0; }
+}
+
+/* Reloj en header */
+#reloj {
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
